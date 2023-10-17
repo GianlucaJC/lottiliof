@@ -807,7 +807,7 @@
 
 
   
-  <script src="js/index.js?ver=7.521"></script>
+  <script src="js/index.js?ver=7.523"></script>
   <script src="js/steril.js?ver=2.4"></script>
   <script src="js/tabelle.js?ver=1.6"></script>
 

@@ -1236,20 +1236,22 @@ function load_etic(tipo,user_id,id_lotto,key,codice,prodotto,scadenza,data_p,qua
 				  html+="</div>";
 				html+="</div>";
 				
-				if (adminLOTTI=="1") {
+				if (adminLOTTI=="1" || adminLOTTI=="2") {
 					html+="<div class='row mt-2' id='div_extra_option'>";
 						html+="<div id ='wait_extra' class='spinner-border' role='status'>";
 							html+="<span class='sr-only'>Loading...</span>";
 						html+="</div>";					
-						html+="<div class='col-sm-4'>";
-							html+="<div class='card h-100'>";
-							  html+="<div class='card-body'>";
-								html+="<h5 class='card-title'>Log operazioni</h5>";
-								html+="<p class='card-text text-justify'>Operazione riservata ad utenza Administrator.<br>Elenco operazioni effettuate sul lotto impegnato: creazione, modifica, cancellazione (Chi ha fatto cosa e quando)</p>";
-								html+="<div class=''><a href='javascript:void(0)' onclick=\"log_eventi("+id_lotto+",'"+codice+"')\" class='btn btn-info'>Vai al Log eventi</a></div>";
-							  html+="</div>";
+						if (adminLOTTI=="1") {
+							html+="<div class='col-sm-4'>";
+								html+="<div class='card h-100'>";
+								  html+="<div class='card-body'>";
+									html+="<h5 class='card-title'>Log operazioni</h5>";
+									html+="<p class='card-text text-justify'>Operazione riservata ad utenza Administrator.<br>Elenco operazioni effettuate sul lotto impegnato: creazione, modifica, cancellazione (Chi ha fatto cosa e quando)</p>";
+									html+="<div class=''><a href='javascript:void(0)' onclick=\"log_eventi("+id_lotto+",'"+codice+"')\" class='btn btn-info'>Vai al Log eventi</a></div>";
+								  html+="</div>";
+								html+="</div>";
 							html+="</div>";
-						html+="</div>";
+						}
 
 					html+="</div>";
 				}					
