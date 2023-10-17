@@ -615,7 +615,7 @@ if ($operazione=="convalida") {
 	$ver="N";
 	if ($tipo=="1") $ver="S";
 	if ($codici_check['resp']=="S") $ver="C";
-	
+	if ($tipo=="2") $ver="N";
 	
 	$sql="UPDATE $tb_lotti set DBverifica='$ver' where id=$id_lotto";
 	$result = $mysqli->query($sql);
