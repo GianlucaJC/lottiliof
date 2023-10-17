@@ -620,6 +620,18 @@ if ($operazione=="convalida") {
 	$sql="UPDATE $tb_lotti set DBverifica='$ver' where id=$id_lotto";
 	$result = $mysqli->query($sql);
 	if ($result) echo "OK"; else echo "KO";
+
+	$datx=date("Y-m-d");
+	$ora = date('H:i:s', time());
+	$operatore=$_SESSION['operatore'];
+	$id_user=$_SESSION['id_user'];
+	$descr="Data:$datx $ora;ID_user:$id_user;Operatore:$operatore";
+	$operazione="0";
+	if ($tipo=="1") $operazione="4";
+	if ($tipo=="2") $operazione="5";
+	$qwx = "INSERT INTO log_lotti (id_lotto,operazione,codice,descrizione,operatore,tipo,data_op) VALUES($id_lotto,$operazione,'--','--','$operatore','--','$datx')";
+	$result=$mysqli->query($qwx);	
+	
 	exit;
 }
 

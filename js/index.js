@@ -1359,8 +1359,9 @@ function log_eventi(id_lotto) {
 					if (operazione=="1") {descr_operazione="Creazione del lotto";bg="bg-white";}
 					if (operazione=="2") {descr_operazione="Modifica del lotto";bg="bg-light"}
 					if (operazione=="3") {descr_operazione="Eliminazione del lotto";bg="bg-warning"}
-
-
+					if (operazione=="4") {descr_operazione="Procedura di caricamento";bg="bg-info"}
+					if (operazione=="5") {descr_operazione="Rimozione  caricamento";bg="bg-info"}
+					
 					html+="<a href='javascript:void(0)' class='list-group-item list-group-item-action "+bg+" mb-2'>";
 						html+="<div class='d-flex w-100 justify-content-between'>";
 							html+="<h4 class='mb-1'><font color='blue'>"+descr_operazione+"</font></h4>";
