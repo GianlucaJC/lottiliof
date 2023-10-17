@@ -1360,7 +1360,7 @@ function log_eventi(id_lotto) {
 					if (operazione=="2") {descr_operazione="Modifica del lotto";bg="bg-light"}
 					if (operazione=="3") {descr_operazione="Eliminazione del lotto";bg="bg-warning"}
 					if (operazione=="4") {descr_operazione="Procedura di caricamento";bg="bg-info"}
-					if (operazione=="5") {descr_operazione="Rimozione  caricamento";bg="bg-secondary"}
+					if (operazione=="5") {descr_operazione="Rimozione  caricamento";bg="bg-light"}
 					
 					html+="<a href='javascript:void(0)' class='list-group-item list-group-item-action "+bg+" mb-2'>";
 						html+="<div class='d-flex w-100 justify-content-between'>";
