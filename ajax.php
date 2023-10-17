@@ -419,7 +419,7 @@ if ($operazione=="salva_modifica") {
 	$lotto_post=$_POST['E_lotto'];
 	$tipo=$_POST['E_tipo'];
 	$campioni=$_POST['E_campioni'];
-	if (strlen($campioni)==0) $campioni=0;
+	if (strlen($campioni)==0) $campioni="";
 	
 	
 
@@ -516,7 +516,7 @@ if ($operazione=="salva_modifica") {
 	$DBmodelli1=$info_regole['DBmodelli1'];	
 
 	
-	$sql="UPDATE $tb_lotti set DBcodice='$codice', DBprodotto='$prodotto', DBquantita='$quantita', DBprot='$protocollo', marcatura_ce='$marcatura_ce',range_temp='$range_temp',sigla_custom='$sigla_custom',descrizione_custom='$descrizione_custom',gtin1='$gtin1',gtin10='$gtin10',sigla_interna='$sigla',DBmodelli='$DBmodelli',DBmodelli1='$DBmodelli1',campioni=$campioni $scad $disp WHERE id=$id_lotto";
+	$sql="UPDATE $tb_lotti set DBcodice='$codice', DBprodotto='$prodotto', DBquantita='$quantita', DBprot='$protocollo', marcatura_ce='$marcatura_ce',range_temp='$range_temp',sigla_custom='$sigla_custom',descrizione_custom='$descrizione_custom',gtin1='$gtin1',gtin10='$gtin10',sigla_interna='$sigla',DBmodelli='$DBmodelli',DBmodelli1='$DBmodelli1',campioni='$campioni' $scad $disp WHERE id=$id_lotto";
 	$result = $mysqli->query($sql);
 
 	$descr="Data:$datx $ora;Codice:$codice;Descrizione:$prodotto;Scadenza:$data_scad1;Disp:$data_disp1;ID_user:$id_user;Operatore:$operatore;Qta:$quantita;Prot:$protocollo,Campioni:$campioni";
