@@ -526,7 +526,7 @@ if (isset($_POST['operazione'])) {
 
 
 //etichetta piccola
-$pdf = new PDF('L', 'mm', 'piccola');
+$pdf = new PDF('P', 'mm', 'piccola');
 $pdf->SetTextColor(0,0,0);  ////imposta testo nero
 
 
@@ -580,7 +580,7 @@ $pdf->Output("label/small$id_print.pdf","F");
 
 
 //etichetta grande
-$pdf = new PDF('L', 'mm', 'grande');
+$pdf = new PDF('P', 'mm', 'grande');
 $pdf->SetTextColor(0,0,0);  ////imposta testo nero
 
 $pdf->SetMargins(0,0,0);
@@ -644,7 +644,7 @@ $pdf->Output("label/large$id_print.pdf","F");
 
 
 //etichetta soluzioni
-$pdf = new PDF('L', 'mm', 'piccola');
+$pdf = new PDF('P', 'mm', 'piccola');
 $pdf->SetTextColor(0,0,0);  ////imposta testo nero
 
 
